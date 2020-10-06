@@ -1,579 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="./apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="./icon-hires.png" rel="icon" sizes="192×192" />
-    <link href="./icon-normal.png" rel="icon" sizes="128×128" />
-    <!-- CSS only -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <style type="text/css">
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            text-align: left;
-            background-color: #fff;
-        }
-
-        .menu_carousel {
-            width: 100%;
-            background-color: #0a374a;
-        }
-
-        .detail_carousel {
-            font-size: 0.8rem;
-            width: 100%;
-            background-color: #0a374a;
-        }
-
-        .detailDivs {
-            height: 50vh;
-        }
-
-        .icons-red {
-            color: red;
-        }
-
-        .icons-green {
-            color: green;
-        }
-
-        .icons-yellow {
-            color: orange;
-        }
-
-        .icons-blue {
-            color: dodgerblue;
-        }
-
-        .table tbody tr td {
-            padding: 4px;
-        }
-
-        canvas {
-            margin: 0 auto;
-            display: block;
-        }
-
-        .list-group-item.active {
-            z-index: 2;
-            color: #fff;
-            background-color: #264653;
-            border-color: #264653;
-        }
-
-        .reasigna {
-            color: rgb(244, 208, 63);
-        }
-
-        .ejecuta {
-            color: rgb(82, 190, 128);
-        }
-
-        .rechaza {
-            color: rgb(235, 152, 78);
-        }
-
-        .pendiente {
-            color: rgb(0, 84, 253);
-        }
-    </style>
-
-    <title>Dashboard RPA Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
 </head>
 
-<body>
-
-
-    <section id="mobile" class="d-block">
-        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active vh-100 menu_carousel text-white">
-                    <div class="card menu_carousel">
-                        <ul class="list-group list-group-flush mx-3 my-5">
-                            <li onclick="initGetData(1);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white active">
-                                Desbloqueo T. Coordenadas<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(2);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo Cuenta Rut<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(3);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo T. Coordenadas<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(4);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo ATM<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(5);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo TCR<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(6);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo Libreta de Ahorro<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(7);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo ONP<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(8);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Bloqueo APP<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                            <li onclick="initGetData(9);"
-                                class="list-group-item rounded d-flex justify-content-between align-items-center menu_carousel text-white">
-                                Desbloqueo Clave Cajero<i class="fa fa-lg fa-arrow-circle-up"></i></li>
-                        </ul>
+<body class="container fondo d-block">
+    <div class="carousel slide carousel-fade" id="carouselExampleSlidesOnly" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <p class="h4 text-white mt-4 text-center">Panel Estratégico</p>
+            <div class="carousel-item card d-block w-100 active">
+                <div class="card-body px-0 py-0">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th>SERVICIO</th>
+                                    <th>NDA</th>
+                                    <th>TMO</th>
+                                    <th>INGRESADA</th>
+                                    <th>CONTESTADA</th>
+                                    <th>ABANDONO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EMER</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>CART</td>
+                                    <td class="table-warning">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>F. SEGUROS</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>ASESORIA FOGAPE</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>ADULTO MAYOR</td>
+                                    <td class="table-warning">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>P. VENTA (Sin opc 1,2)</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>WEB</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>CONS. PREVISIÓN (OPC 1)</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL FUSIÓN</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
                 </div>
-                <div class="carousel-item vh-100 detail_carousel">
-                    <div class="container" id="charts">
-                        <div class="row mt-3 justify-content-center">
-                            <div class="col-sm-12">
-                                <div class="card">
-                                    <div id="app" class="card-body">
-                                        <canvas id="myChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3 justify-content-center detailDivs">
-                            <div class="col-sm-12 ">
-                                <div class="card px-1 pt-1">
-                                    <table class="table table-borderless">
-                                        <tbody id="detalle">
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <h6 id="lastRecord" class="text-white mt-3 text-center"></h6>
-                            </div>
-                        </div>
+            </div>
+            <div class="carousel-item card d-block w-100">
+                <div class="card-body px-0 py-0">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th>SERVICIO</th>
+                                    <th>NDA</th>
+                                    <th>TMO</th>
+                                    <th>INGRESADA</th>
+                                    <th>CONTESTADA</th>
+                                    <th>ABANDONO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EMER</td>
+                                    <td class="table-warning">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>CART</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>F. SEGUROS</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>P. VENTA (Sin opc 1,2)</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>WEB</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL FUSIÓN</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-
+                </div>
+            </div>
+            <div class="carousel-item card d-block w-100">
+                <div class="card-body px-0 py-0">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th colspan="2"></th>
+                                    <th>14:30 - 15:00</th>
+                                    <th>15:00 - 15:30</th>
+                                    <th colspan="2"></th>
+                                </tr>
+                                <tr class="table-primary">
+                                    <th>SERVICIO</th>
+                                    <th>NDA</th>
+                                    <th>TMO</th>
+                                    <th>INGRESADA</th>
+                                    <th>CONTESTADA</th>
+                                    <th>ABANDONO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EMER</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>CART</td>
+                                    <td class="table-warning">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>F. SEGUROS</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>ASESORIA FOGAPE</td>
+                                    <td class="table-success">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>ADULTO MAYOR</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>P. VENTA (Sin opc 1,2)</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>WEB</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
+                                    <td class="table-warning">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                                <tr>
+                                    <td>TOTAL FUSIÓN</td>
+                                    <td class="table-danger">97,99%</td>
+                                    <td>278</td>
+                                    <td>5073</td>
+                                    <td>4971</td>
+                                    <td>102</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+        <!-- 
+                <div class="accordion mt-2" id="accordionChart">
+                    <div class="card fondo">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left text-white" id="first-btn" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    
+                                </button>
+                            </h2>
+                        </div>
 
+                        <div id="collapseOne" class="collapse bgbody show" aria-labelledby="headingOne"
+                            data-parent="#accordionChart">
+                            
+                        </div>
+                    </div>
+                    <div class="card fondo">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Estrategia mes Acumulado
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse bgbody" aria-labelledby="headingTwo"
+                            data-parent="#accordionChart">
+                            
+                        </div>
+                    </div>
+                    <div class="card fondo">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Últimas 2 franjas cerradas
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse bgbody" aria-labelledby="headingThree"
+                            data-parent="#accordionChart">
+                            
+                        </div>
+                    </div>
+                </div> -->
 
-
-
-
-    <!-- JS, Popper.js, and jQuery -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-
-    <%-- Chart js --%>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-
-    <script src="js/middleware.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        //////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////   CALL INIT ACTIONS   //////////////////////////
-
-        /*
-            -   Obtiene titulo para Chart RPA, segun opción de menú seleccionada
-        */
-        const getTitle = (i) => {
-            //let str = ['Desbloqueo T. Coordenadas', 'Bloqueo Cuenta Rut', 'Bloqueo T. Coordenadas', 'Bloqueo ATM', 'Bloqueo TCR', 'Bloqueo Libreta de Ahorro', 'Bloqueo ONP', 'Bloqueo APP']
-            //return str[i - 1];
-            return document.getElementsByClassName('list-group-item')[i - 1].innerText;
-        }
-        //  Autor: Elvis Brevi
-        //  Mostrar pantalla de carga en una seccion
-        function ShowLoading() {
-            if (!document.querySelector('.loading')) {
-                var parent = document.createElement("div");
-                parent.innerHTML = `
-                            <div class ="loading d-flex justify-content-center">
-                                <div class ="spinner-grow text-info mt-4" style="width: 10rem; height: 10rem;" role="status">
-                                    <span class ="sr-only">Cargando...</span>
-                                </div>
-                            </div>
-                            `;
-                document.getElementById('app').prepend(parent);
-            }
-        }
-
-        //  Autor: Elvis Brevi
-        //  Ocultar pantalla de carga en una seccion
-        function HideLoading() {
-            if (document.querySelector('.loading')) {
-                window.setTimeout(
-                    document.querySelector('.loading').style.opacity = '0'
-                    , 1000);
-            }
-        }
-
-        $('.carousel').carousel({
-            interval: 0,
-            wrap: false
-        })
-
-        $(".list-group .list-group-item").bind("click", function (event) {
-            event.preventDefault();
-            var clickedItem = $(this);
-            $(".list-group .list-group-item").each(function () {
-                $(this).removeClass("active");
-            });
-            clickedItem.addClass("active");
-        });
-
-        var miStorage = window.localStorage;
-        miStorage.setItem('lastSend', '');
-        var email = '';
-        var loaderEst;
-        var loader;
-
-        const createRow = (obj) => {
-            return `<tr>
-            <td><i class ="fa fa-lg fa-square ${obj.clase}"></i></td>
-            <td>${obj.text}</td>
-            <td>${obj.data}</td>
-            <td>${obj.percent}</td>
-                </tr>
-        `;
-        }
-
-        /*
-            -    actualiza detalle RPA 
-        */
-        function detalleRPA(state, id) {
-            if (id >= 3) {
-                return false;
-            }
-            let data = state[0]
-            let dataTable = '';
-            console.log(data)
-            //dataTable += createRow({ text: 'Agendamientos', data: data.TOTAL_REALIZA_BOT + ' de ' + data.TOTAL_DIA, percent: (!isNaN(Math.round(data.TOTAL_REALIZA_BOT * 100 / data.TOTAL_DIA))) ? Math.round(data.TOTAL_REALIZA_BOT * 100 / data.TOTAL_DIA) + '%' : '0' + '%' });
-            dataTable += createRow({ clase: 'ejecuta', text: 'Ejecutados', data: data.TOTAL_EJECUTADOS + ' de ' + data.TOTAL_DIA, percent: (!isNaN(Math.round(data.TOTAL_EJECUTADOS * 100 / data.TOTAL_DIA))) ? Math.round(data.TOTAL_EJECUTADOS * 100 / data.TOTAL_DIA) + '%' : '0' + '%' });
-            dataTable += createRow({ clase: 'rechaza', text: 'Rechazados', data: data.TOTAL_RECHAZADOS + ' de ' + data.TOTAL_DIA, percent: (!isNaN(Math.round(data.TOTAL_RECHAZADOS * 100 / data.TOTAL_DIA))) ? Math.round(data.TOTAL_RECHAZADOS * 100 / data.TOTAL_DIA) + '%' : '0' + '%' });
-            dataTable += createRow({ clase: 'reasigna', text: 'Reasignados', data: data.TOTAL_NO_REALIZA_BOT + ' de ' + data.TOTAL_DIA, percent: (!isNaN(Math.round(data.TOTAL_NO_REALIZA_BOT * 100 / data.TOTAL_DIA))) ? Math.round(data.TOTAL_NO_REALIZA_BOT * 100 / data.TOTAL_DIA) + '%' : '0' + '%' });
-            dataTable += createRow({ clase: 'pendiente', text: 'Pendientes', data: data.TOTAL_PENDIENTES + ' de ' + data.TOTAL_DIA, percent: (!isNaN(Math.round(data.TOTAL_PENDIENTES * 100 / data.TOTAL_DIA))) ? Math.round(data.TOTAL_PENDIENTES * 100 / data.TOTAL_DIA) + '%' : '0' + '%' });
-            document.getElementById('detalle').innerHTML = dataTable;
-
-            let lastReg = new Date(data.ULTIMA_ACCION);
-            let now = new Date();
-            let diff = new Date(now - lastReg);
-            let typeDiff = (diff.getMinutes() == 0) ? (isNaN(diff.getSeconds()) ? 0 : diff.getSeconds()) + ' seg. atrás' : (isNaN(diff.getMinutes()) ? 0 : diff.getMinutes()) + ' min. atrás';
-
-
-            document.getElementById('lastRecord').innerHTML = (data.ULTIMA_ACCION != null) ? 'Última actividad: aprox ' + typeDiff : 'Última actividad: Sin registro';
-        }
-
-        const steps = [
-            'Levantamiento',
-            'Desarrollo',
-            'V.B. Casos de Prueba',
-            'V.B. Riesgo Operacional',
-            'V.B. Riesgo Tecnológico',
-            'Creación cargo RRHH',
-            'Identificación de privilegios',
-            'Autorización AFA',
-            'Creación Puesto de Trabajo',
-            'Habilitacón en SISPERM',
-            'Puesta en producción'
-        ];
-
-        const setIcon = (level) => {
-            //console.log(obj)
-            let clase = ''
-            switch (level) {
-                case 'OK':
-                    clase = 'fa fa-lg fa-square icons-green'
-                    break;
-                case 'EN PROCESO':
-                    clase = 'fa fa-lg fa-square icons-yellow'
-                    break;
-                case 'PENDIENTE':
-                    clase = 'fa fa-lg fa-square icons-red'
-                    break;
-            }
-            return clase;
-        }
-
-        const infoRPA = new Array()
-        infoRPA[3] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'PENDIENTE', 'PENDIENTE', 'Autorización de Perfiles ROyT revisó el formulario y lo autorizó, sin embargo hoy Administación de Perfiles, revisaron e indicaron que había un error en el privilegio informado por el AFA ya que no corresponde a Tarjeta de coordenadas, José Toledo se ha contactado con el AFA para revisar lo informado respecto a que el privilegio no es el correcto.']
-        infoRPA[4] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'EN PROCESO', 'PENDIENTE', 'Hoy se crearon las cuentas para vincular los puestos de trabajo, apenas se visualicen en sistema se iniciará el Piloto de verificación de funcionamiento del RPA para su paso a Producción, esto será coordinado entre Janet Sanhueza y Carlos Leiva']
-        infoRPA[5] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'EN PROCESO', 'PENDIENTE', 'Hoy se crearon las cuentas para vincular los puestos de trabajo, apenas se visualicen en sistema se iniciará el Piloto de verificación de funcionamiento del RPA para su paso a Producción, esto será coordinado entre Janet Sanhueza y Carlos Leiva']
-        infoRPA[6] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'AFA responde que están a full con el tema de las cuentas por el abono del 10% y que el día miércoles lo contacte para revisar este tema, antes no puede.']
-        infoRPA[7] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'AFA responde que están a full con el tema de las cuentas por el abono del 10% y que el día miércoles lo contacte para revisar este tema, antes no puede.']
-        infoRPA[8] = ['OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'OK', 'EN PROCESO', 'PENDIENTE', 'PENDIENTE', 'José Toledo gestionó la autorización de AFA Abdallah Zavala, requerida por Autorizacón de Perfiles ROyT, hoy respondieron que existe privilegio en PU que permite generar el bloqueo de la APP y semilla de esta, lo cual fue solicitado validar con el EFA.']
-        infoRPA[9] = ['OK', 'OK', 'PENDIENTE', 'EN PROCESO', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'PENDIENTE', 'Se generó modificación al formulario de levantamiento de la iniciativa de robotización de "Desbloqueo de claves de cajero", debido a una modificación en la configuración definida incialmente, por lo cual la Gerencia de Riesgo Operacional debe evaluar nuevamente el formulario.']
-
-        const tableInfo = (id, title) => {
-            let div = document.querySelector('#app')
-            let table = document.createElement('table')
-            table.classList = 'table tabla table-borderless'
-            let tbody = document.createElement('tbody')
-            let tbodyDetalle = document.getElementById('detalle')
-            console.log(infoRPA[id].length)
-            infoRPA[id].map((x, i) => {
-                let tr = document.createElement('tr');
-                let td1 = document.createElement('td'),
-                    td2 = document.createElement('td');
-                if (i < 11) {
-                    td1.innerHTML = steps[i];
-                    td1.style.padding = '3px';
-                    td2.style.padding = '3px';
-                    td2.innerHTML = '<i class="' + setIcon(x) + '"></i>';
-                    tr.appendChild(td1)
-                    tr.appendChild(td2)
-                    tbody.appendChild(tr)
-                } else {
-                    td1.innerHTML = x;
-                    td1.classList = 'text-justify px-3'
-                    tr.appendChild(td1)
-                    tbodyDetalle.innerHTML = ''
-                    tbodyDetalle.appendChild(tr)
-                }
-
-            })
-            table.appendChild(tbody);
-            div.innerHTML = '<h5 class="card-title text-center">RPA: ' + title + '</h5>'
-            div.appendChild(table)
-            document.getElementById('lastRecord').innerHTML = 'Actualizado al 27/08/2020'
-        }
-        /*
-            -    actualiza chart 
-        */
-        function chartRPA(state, title, id) {
-            if (document.getElementById('myChart')) { document.getElementById('myChart').remove(); }
-            //zqui ewnsweizo
-
-            if (state.length == 0) {
-                document.getElementById('app').innerHTML = '<h5 class="card-title">No existen datos a mostrar. </h5><div id="myChart"></div>';
-
-                return false;
-            }
-            document.getElementById('app').innerHTML = '<h5 class="card-title">RPA: ' + title + '</h5><canvas id="myChart"  width="350" height="350"></canvas>';
-            let data = state
-            let cols = []
-            let nums = []
-            let colors = []
-
-            data.map((x) => {
-                cols.push(x.ESTADO)
-                nums.push(x.AGENDAMIENTOS)
-                colors.push(x.COLOR_ESTADO);
-            })
-
-            let ctx = document.getElementById('myChart').getContext('2d');
-
-            let myChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: cols,
-                    datasets: [{
-                        label: '# of Votes',
-                        data: nums,
-                        backgroundColor:
-                            colors
-                        ,
-                        borderWidth: 1,
-                        datalabels: {
-                            color: '#2C3E50',
-                            labels: {
-                                title: {
-                                    font: {
-                                        weight: 'bold'
-                                    }
-                                }
-                            }
-                            //,
-                            //formatter: function (value, context) {
-                            //    return value + ' Registros';
-                            //}
-                        }
-                    }]
-                },
-                options: {
-                    legend: {
-                        display: false
-                    }
-                }
-            });
-        }
-
-        function hasClass(element, className) {
-            return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
-        }
-
-        /*
-            -   Reinicia bucle TimeOut con nueva petición
-        */
-        const initGetData = (id) => {
-            clearTimeout(loader);
-            document.getElementById('app').innerHTML = '';
-            $("#carouselExampleSlidesOnly").carousel("next");
-            if (id >= 3) {
-                tableInfo(id, getTitle(id))
-                return false
-            }
-            getData(id)
-        }
-
-
-
-        /*
-            -   Extrae data 
-        */
-        const getData = (id) => {
-
-            ShowLoading();
-            if (id >= 3) {
-
-            }
-            let url = "https://becdata.cl/dashboard/botReport.aspx/GetDataBots"
-            let data = {
-                'id': id
-            }
-
-            // ACTIONS
-            _async.queryFetch(url, data)
-                .then(res => {
-                    if (res.error) {
-                        throw (res.error);
-                    }
-
-                    let data = JSON.parse(res.d);
-
-                    chartRPA(data.Table1, getTitle(id), id)
-                    detalleRPA(data.Table2, id)
-                    HideLoading();
-                })
-                .catch(error => {
-                    console.log({ type: 'error', error: error });
-                })
-            if (id < 3) {
-                loader = setTimeout(getData, 30000, id)
-            }
-        }
-
-        /*
-            -   Reinicia bucle TimeOut con nueva petición
-        */
-        const initGetEstadoBots = () => {
-            clearTimeout(loaderEst);
-            getEstadoBots()
-        }
-
-        /*
-            -   Setea estado RPA en Menu
-        */
-        const colors = (obj) => {
-            //console.log(obj)
-            let clase = ''
-            switch (obj.COLOR_INDICADOR) {
-                case 'VERDE':
-                    clase = 'fa fa-lg fa-arrow-circle-up icons-green'
-                    break;
-                case 'AMARILLO':
-                    clase = 'fa fa-lg fa-stop-circle icons-yellow'
-                    break;
-                case 'AZUL':
-                    clase = 'fa fa-lg fa-list-alt icons-blue'
-                    break;
-                case 'ROJO':
-                    email += obj.NAME_INDICADOR + ' ';
-                    clase = 'fa fa-lg fa-stop-circle icons-red'
-                    break;
-            }
-            return clase;
-        }
-
-        const iconLight = (obj, i) => {
-            document.querySelectorAll('li.list-group-item > i')[i].className = colors(obj)
-        }
-
-        /*
-            -   Envia Data a WebMethod EnviaCorreo
-        */
-        const sendMail = (em) => {
-            let url = "https://becdata.cl/dashboard/botReport.aspx/EnviaCorreo"
-            let data = { 'email': em }
-
-            // ACTIONS
-            _async.queryFetch(url, data)
-                .then(res => {
-                    if (res.error) {
-                        throw (res.error);
-                    }
-
-                    let data = JSON.parse(res.d);
-                })
-                .catch(error => {
-                    console.log({ type: 'error', error: error });
-                })
-        }
-
-        /*
-            -   Obtiene estado de RPA's
-        */
-        const getEstadoBots = () => {
-            let url = "https://becdata.cl/dashboard/botReport.aspx/GetEstadoBots"
-            let data = {}
-
-            // ACTIONS
-            _async.queryFetch(url, data)
-                .then(res => {
-                    if (res.error) {
-                        throw (res.error);
-                    }
-
-                    let data = JSON.parse(res.d);
-                    data.Table.map((x, i) => {
-                        iconLight(x, i)
-                    })
-
-                    if (email != '') {
-                        //console.log('lastSend' + miStorage.getItem('lastSend'));
-                        if (miStorage.getItem('lastSend') != '') {
-                            let diffMs = (new Date() - new Date(miStorage.getItem('lastSend')));
-                            var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
-                            if (diffMins == 10) {
-                                sendMail(email)
-                                miStorage.setItem('lastSend', new Date().toString());
-                            }
-                        } else {
-                            sendMail(email)
-                            miStorage.setItem('lastSend', new Date().toString());
-                        }
-                        email = ''
-                    }
-                })
-                .catch(error => {
-                    console.log({ type: 'error', error: error });
-                })
-
-            loaderEst = setTimeout(getEstadoBots, 60000)
-        }
-
-        initGetEstadoBots()
-        //initGetData(1)
-        /////////////////////////////   CALL INIT ACTIONS   //////////////////////////
-        //////////////////////////////////////////////////////////////////////////////
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
