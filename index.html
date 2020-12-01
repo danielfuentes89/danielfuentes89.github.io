@@ -1,614 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
+  <!-- Page Information
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>LittleLink</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton-light.css">
+  <link rel="stylesheet" href="css/brands.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/avatar.png">
+
 </head>
+<body>
 
-<body class="container fondo d-block">
-    <!-- <div class="carousel slide carousel-fade" id="carouselExampleSlidesOnly" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
-            <li data-target="#carouselExampleSlidesOnly" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <p class="h4 text-white mt-4 text-center">Panel Estratégico</p>
-            <div class="carousel-item card d-block w-100 active">
-                <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ASESORIA FOGAPE</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ADULTO MAYOR</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CONS. PREVISIÓN (OPC 1)</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item card d-block w-100">
-                <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item card d-block w-100">
-                <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th colspan="2"></th>
-                                    <th>14:30 - 15:00</th>
-                                    <th>15:00 - 15:30</th>
-                                    <th colspan="2"></th>
-                                </tr>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ASESORIA FOGAPE</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ADULTO MAYOR</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <p class="h4 text-white mt-4 mb-3 text-center">Panel Estratégico</p>
-                <div class="accordion mt-2" id="accordionChart">
-                    <div class="card fondo">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left text-white" id="first-btn" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    
-                                </button>
-                            </h2>
-                        </div>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="column" style="margin-top: 10%">
+        <!-- Your Image Here -->
+        <img src="images/avatar.png" srcset="images/avatar@2x.png 2x">
 
-                        <div id="collapseOne" class="collapse bgbody show" aria-labelledby="headingOne"
-                            data-parent="#accordionChart">
-                            <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ASESORIA FOGAPE</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ADULTO MAYOR</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CONS. PREVISIÓN (OPC 1)</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                        </div>
-                    </div>
-                    <div class="card fondo">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    Estrategia mes Acumulado
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse bgbody" aria-labelledby="headingTwo"
-                            data-parent="#accordionChart">
-                            <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                        </div>
-                    </div>
-                    <div class="card fondo">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed text-white" type="button"
-                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                    aria-controls="collapseThree">
-                                    Últimas 2 franjas cerradas
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse bgbody" aria-labelledby="headingThree"
-                            data-parent="#accordionChart">
-                            <div class="card-body px-0 py-0">
-                    <div class="table-responsive">
-                        <table class="table table-sm table-bordered">
-                            <thead>
-                                <tr class="table-primary">
-                                    <th colspan="2"></th>
-                                    <th>14:30 - 15:00</th>
-                                    <th>15:00 - 15:30</th>
-                                    <th colspan="2"></th>
-                                </tr>
-                                <tr class="table-primary">
-                                    <th>SERVICIO</th>
-                                    <th>NDA</th>
-                                    <th>TMO</th>
-                                    <th>INGRESADA</th>
-                                    <th>CONTESTADA</th>
-                                    <th>ABANDONO</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>EMER</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>CART</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>F. SEGUROS</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ASESORIA FOGAPE</td>
-                                    <td class="table-success">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>ADULTO MAYOR</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>P. VENTA (Sin opc 1,2)</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>WEB</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>AUTENTICA CTA RUT (OPC 2)</td>
-                                    <td class="table-warning">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                                <tr>
-                                    <td>TOTAL FUSIÓN</td>
-                                    <td class="table-danger">97,99%</td>
-                                    <td>278</td>
-                                    <td>5073</td>
-                                    <td>4971</td>
-                                    <td>102</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Your Name -->
+        <h1>LittleLink</h1>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
+        <!-- Short Bio -->
+        <p>LittleLink is an open source DIY alternative to services like <a href="https://linktr.ee">Linktree</a> and <a href="https://many.link">many.link</a>. LittleLink was built using <a href="http://www.getskeleton.com">Skeleton</a>, a dead simple, responsive boilerplate — we’ve just created some branded buttons and stripped out the things you won't need. 😊</p>
+        
+        <!-- Replace # with your profile URL. Delete whatever you don't need & create your own brand styles in css/brands.css -->  
 
-    <script src="app.js"></script>
+
+        <!-- Github -->
+        <a class="button button-github" href="#"><img class="icon" src="icons/github.svg">Github</a>
+          <br>
+        
+        <!-- Twitter -->
+        <a class="button button-twitter" href="#"><img class="icon" src="icons/twitter.svg">Twitter</a>
+          <br>
+
+        <!-- Instagram -->
+        <a class="button button-instagram" href="#"><img class="icon" src="icons/instagram.svg">Instagram</a>
+          <br>
+
+        <!-- Facebook -->
+        <a class="button button-facebook" href="#"><img class="icon" src="icons/facebook.svg">Facebook</a>
+          <br>
+
+        <!-- LinkedIn -->
+        <a class="button button-linkedin" href="#"><img class="icon" src="icons/linkedin.svg">LinkedIn</a>
+          <br>
+
+        <!-- YouTube -->
+        <a class="button button-youtube" href="#"><img class="icon" src="icons/youtube.svg">YouTube</a>
+          <br> 
+
+        <!-- Snapchat -->
+        <a class="button button-snapchat" href="#"><img class="icon" src="icons/snapchat.svg">Snapchat</a>
+          <br>
+
+        <!-- Spotify -->
+        <a class="button button-spotify" href="#"><img class="icon" src="icons/spotify.svg">Spotify</a>
+          <br>      
+          
+        <!-- Reddit -->
+        <a class="button button-reddit" href="#"><img class="icon" src="icons/reddit.svg">Reddit</a>
+          <br>   
+          
+         <!-- Rocketseat -->
+         <a class="button button-rocketseat" href="#"><img class="icon" src="icons/rocketseat.svg">Rocketseat</a>
+         <br>   
+
+        <!-- Medium -->
+        <a class="button button-medium" href="#"><img class="icon" src="icons/medium.svg">Medium</a>
+          <br> 
+
+        <!-- Pinterest -->
+        <a class="button button-pinterest" href="#"><img class="icon" src="icons/pinterest.svg">Pinterest</a>
+          <br>
+
+        <!-- SoundCloud -->
+        <a class="button button-soundcloud" href="#"><img class="icon" src="icons/soundcloud.svg">SoundCloud</a>
+          <br>        
+         
+        <!-- Spectrum -->
+        <a class="button button-spectrum" href="#"><img class="icon" src="icons/spectrum.svg">Spectrum</a>
+          <br>          
+
+        <!-- Figma -->
+        <a class="button button-figma" href="#"><img class="icon" src="icons/figma.svg">Figma</a>
+          <br>
+
+        <!-- Kit -->
+        <a class="button button-kit" href="#"><img class="icon" src="icons/kit.svg">Kit</a>
+          <br>          
+
+        <!-- Telegram -->
+        <a class="button button-telegram" href="#"><img class="icon" src="icons/telegram.svg">Telegram</a>
+          <br>          
+
+        <!-- Tumblr -->
+        <a class="button button-tumblr" href="#"><img class="icon" src="icons/tumblr.svg">Tumblr</a>
+          <br>
+
+        <!-- Steam -->
+        <a class="button button-steam" href="#"><img class="icon" src="icons/steam.svg">Steam</a>
+          <br>
+
+        <!-- Discord -->
+        <a class="button button-discord" href="#"><img class="icon" src="icons/discord.svg">Discord</a>
+          <br>
+
+        <!-- Twitch -->
+        <a class="button button-twitch" href="#"><img class="icon" src="icons/twitch.svg">Twitch</a>
+          <br>
+
+        <!-- Mixer -->
+        <a class="button button-mixer" href="#"><img class="icon" src="icons/mixer.svg">Mixer</a>
+          <br>
+
+        <!-- Goodreads -->
+        <a class="button button-goodreads" href="#"><img class="icon" src="icons/goodreads.svg">Goodreads</a>
+          <br>
+
+        <!-- Skoob -->
+        <a class="button button-skoob" href="#"><img class="icon" src="icons/skoob.svg">Skoob</a>
+          <br>
+          <br>
+        <p>Build your own by forking <a href="https://littlelink.io">LittleLink</a>.</p>
+          
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
 </html>
